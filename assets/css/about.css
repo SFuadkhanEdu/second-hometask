@@ -1,138 +1,148 @@
 /* rule set */
 .flex {
-    display: flex;
+  display: flex;
+}
+.container, .nav_container {
+  max-width: 1140px;
+}
+a,
+h1 {
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+}
+h1 {
+  font-size: 80px;
+  font-weight: 800;
+  font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+h2 {
+  font-size: 36px;
+  font-weight: 800;
+  font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+h3 {
+  font-weight: 300;
+  font-size: 1.75rem;
+}
+/* rule set */
+
+/* header start */
+header {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://sb-clean-blog.startbootstrap.com/assets/img/about-bg.jpg");
+  background-position: center;
+  min-height: 530px;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.navbar {
+  font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.navbar_logo a {
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+.navbar_links ul {
+  gap: 30px;
+}
+.navbar_links ul li{
+  padding: 10px;
+}
+.navbar_links ul li:hover a{
+  color: rgb(12, 34, 81);
+}
+.toggle_menu {
+  display: none;
+  align-self: center;
+}
+.toggle_menu button {
+  background-color: transparent;
+  padding: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: auto 0;
+}
+.header_content {
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* header end */
+
+/* footer start */
+footer {
+  margin: 70px auto;
+  flex-direction: column;
+  gap: 40px;
+}
+footer p {
+  text-align: center;
+}
+.socials {
+  justify-content: center;
+  gap: 30px;
+}
+.socials button {
+  padding: 15px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.socials i {
+  color: white;
+  font-size: 1.25rem;
+}
+.socials button:hover {
+  background-color: rgb(12, 34, 81);
+}
+/* footer end */
+
+@media screen and (max-width: 992px) {
+  .nav_container{
+    width: 100%;
   }
   .container {
-    max-width: 1140px;
-  }
-  a,
-  h1 {
-    color: white;
-    font-size: 29px;
-  }
-  h1 {
-    font-size: 80px;
-    font-weight: 800;
-    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
-  }
-  h2 {
-    font-size: 36px;
-    font-weight: 800;
-    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
-  }
-  h3 {
-    font-weight: 300;
-    font-size: 1.75rem;
-  }
-  /* rule set */
-  
-  /* header start */
-  header {
-    position: relative;
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("https://sb-clean-blog.startbootstrap.com/assets/img/about-bg.jpg");
-    background-position: center;
-    min-height: 530px;
-    /* justify-content: center; */
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 50px;
+    max-width: 960px;
   }
   .navbar {
-    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
-    padding: 20px;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .navbar_logo {
-    font-weight: 800;
-    font-size: 1.25rem;
-  }
-  .navbar_links ul {
-    gap: 30px;
+    background-color: white;
+    
   }
   .toggle_menu {
+    display: block;
+  }
+  .navbar_links ul {
     display: none;
-    align-self: center;
   }
-  .toggle_menu button {
-    background-color: transparent;
-    padding: 13px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    margin: auto 0;
+  .navbar_logo a {
+    color: #343a40;
   }
-  .header_content {
-    color: white;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 720px;
   }
-  /* header end */
-
-  /* footer start */
-footer {
-    margin: 70px auto;
-    flex-direction: column;
-    gap: 40px;
+  h1 {
+    font-size: 50px;
   }
-  footer p {
-    text-align: center;
+  h2 {
+    font-size: 30px;
   }
-  .socials{
-      justify-content: center;
-      gap: 30px;
+}
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 540px;
   }
-  .socials button{
-      padding: 15px;
-      border-radius: 50%;
-      background-color: rgba(0, 0, 0, 0.8);
+  .navbar {
+    padding: 10px;
   }
-  .socials i{
-      color: white;
-      font-size: 1.25rem;
-  }
-  .socials button:hover{
-    background-color: rgb(12, 34, 81);
-  }
-  /* footer end */
-
-  @media screen and (max-width: 992px) {
-    .container {
-      max-width: 960px;
-    }
-    .navbar {
-      background-color: white;
-    }
-    .toggle_menu {
-      display: block;
-    }
-    .navbar_links ul {
-      display: none;
-    }
-    .navbar_logo a {
-      color: #343a40;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .container {
-      max-width: 720px;
-    }
-    h1 {
-      font-size: 50px;
-    }
-    h2 {
-      font-size: 30px;
-    }
-  }
-  @media screen and (max-width: 576px) {
-    .container {
-      max-width: 540px;
-    }
-    .navbar {
-      padding: 10px;
-    }
-  }
-  
+}

@@ -2,13 +2,15 @@
 .flex {
   display: flex;
 }
-.container {
+.container,
+.nav_container {
   max-width: 1140px;
 }
 a,
 h1 {
   color: white;
-  font-size: 29px;
+  font-size: 14px;
+  font-weight: 800;
 }
 h1 {
   font-size: 80px;
@@ -34,7 +36,6 @@ header {
     url("https://sb-clean-blog.startbootstrap.com/assets/img/home-bg.jpg");
   background-position: center;
   min-height: 530px;
-  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
   margin-bottom: 50px;
@@ -44,13 +45,24 @@ header {
   padding: 20px;
   justify-content: space-between;
   width: 100%;
+  align-items: center;
 }
-.navbar_logo {
+.navbar_links ul a:hover {
+  color: rgb(12, 34, 81);
+}
+.navbar_logo a {
   font-weight: 800;
   font-size: 1.25rem;
 }
+
 .navbar_links ul {
   gap: 30px;
+}
+.navbar_links ul li {
+  padding: 10px;
+}
+.navbar_links ul li:hover a {
+  color: rgb(12, 34, 81);
 }
 .toggle_menu {
   display: none;
@@ -82,11 +94,10 @@ main {
   padding: 40px 15px;
   width: 55%;
   gap: 20px;
-
 }
-.main_content_item{
-    flex-direction: column;
-    gap: 10px;
+.main_content_item {
+  flex-direction: column;
+  gap: 10px;
 }
 /* main end */
 /* footer start */
@@ -98,23 +109,29 @@ footer {
 footer p {
   text-align: center;
 }
-.socials{
-    justify-content: center;
-    gap: 30px;
+.socials {
+  justify-content: center;
+  gap: 30px;
 }
-.socials button{
-    padding: 15px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.8);
+.socials button {
+  padding: 15px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
 }
-.socials i{
-    color: white;
-    font-size: 1.25rem;
+.socials i {
+  color: white;
+  font-size: 1.25rem;
+}
+.socials button:hover {
+  background-color: rgb(12, 34, 81);
 }
 /* footer end */
 @media screen and (max-width: 992px) {
   .container {
     max-width: 960px;
+  }
+  .nav_container {
+    width: 100%;
   }
   .navbar {
     background-color: white;
@@ -142,7 +159,7 @@ footer p {
   h2 {
     font-size: 30px;
   }
-  .main_content{
+  .main_content {
     width: 100%;
   }
 }
