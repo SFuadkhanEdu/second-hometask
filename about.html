@@ -12,6 +12,18 @@
     <link rel="shortcut icon" href="./assets/bootstrap.ico" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/about.css"> 
+    <script>
+        function open_ul() {
+            console.log("hey")
+            const element = document.getElementById('ul_element');
+            if (element.style.display === 'none' || element.style.display === '') {
+                element.style.display = 'block';
+            }
+            else{
+                element.style.display = 'none';
+            }
+        }
+    </script>
 </head>
 <body>
     <header class="flex">
@@ -20,14 +32,14 @@
                 <a href="">Start Bootstrap</a>
             </div>
             <div class="navbar_links">
-                <ul class="flex">
+                <ul class="flex" id="ul_element">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href=""><i class="fa-brands fa-github"></i></a></li>
                 </ul>
             </div>
             <div class="flex toggle_menu">
-                <button><i class="fa-solid fa-bars"></i></button>
+                <button onclick="open_ul()"><i class="fa-solid fa-bars"></i></button>
             </div>
         </nav>
         <div class="header_content">
